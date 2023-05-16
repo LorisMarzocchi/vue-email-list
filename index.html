@@ -11,10 +11,10 @@
     <div id="app">
         <ul>
 
-            <li>{{ randomMail }}</li>
+            <li v-for="newMail in randomMail" :key="index" v-show="randomMail.length == 10">{{ newMail }}</li>
 
         </ul>
-
+        <!-- <div v-if="isResultReady">{{ result }}</div> -->
         <button @click="rndMail()"></button>
     </div>
 
